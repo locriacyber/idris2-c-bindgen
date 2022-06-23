@@ -1,0 +1,8 @@
+.precomp/
+/App-IdrisCBindGen-*
+
+# test output
+/t/*.out
+
+# idris cache
+/build/

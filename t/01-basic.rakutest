@@ -1,0 +1,24 @@
+use Test;
+use App::IdrisCBindGen;
+
+subtest 'full-test', { 
+    my $input = ez_bind(
+        module_name => 'Raylib',
+        monad_name => 'Raylib',
+        c_lib_name => 'libraylib',
+        functions => [
+            ez_func('InitWindow', <Int Int String>, '()'),
+            ez_func('WindowShouldClose', (), 'Bool'),
+            ez_func('BeginDrawing', (), '()'),
+            ez_func('EndDrawing', (), '()'),
+        ],
+    );
+
+    my $output = 't/01.idr'.IO.slurp;
+    my $output-real = $input.generate-full;
+    't/01.idr.out'.IO.spurt($output-real);
+
+    is $output-real, $output
+}
+
+done-testing;

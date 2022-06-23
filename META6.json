@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "Locria Cyber"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "C to Idris Bindings Generator",
+  "license": "Artistic-2.0",
+  "name": "App::IdrisCBindGen",
+  "perl": "6.d",
+  "provides": {
+    "App::IdrisCBindGen": "lib/App/IdrisCBindGen.rakumod",
+    "App::IdrisCBindGen::CodeGen": "lib/App/IdrisCBindGen/CodeGen.rakumod",
+    "App::IdrisCBindGen::FFITypes": "lib/App/IdrisCBindGen/FFITypes.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}
